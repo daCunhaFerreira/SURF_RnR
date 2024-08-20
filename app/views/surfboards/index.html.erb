@@ -1,7 +1,5 @@
 <H1> Surfboards in area</h1>
 
-
-
 <div class="countainer p-5">
   <div class="row">
     <% @surfboards.each do |surfboard| %>
@@ -9,8 +7,8 @@
         <div class="card-trip">
           <%= image_tag surfboard.photo, class:"photo-img" %>
             <div class="card-trip-infos">
-              <h2><%= surfboard.name %></h2>
-              <p><%= surfboard.details %></p>
+              <h2><%= link_to surfboard.name, surfboard_path(surfboard) %></h2>
+              <p><%= link_to surfboard.details, surfboard_path(surfboard) %></p>
             </div>
             <h2 class="card-trip-pricing"><%= surfboard.price %>£</h2>
         </div>
@@ -18,3 +16,5 @@
     <% end %>
   </div>
 </div>
+
+
