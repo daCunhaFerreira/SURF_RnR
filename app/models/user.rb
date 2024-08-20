@@ -7,5 +7,4 @@ class User < ApplicationRecord
   has_many :surfboards
   has_many :bookings
 
-
 end
