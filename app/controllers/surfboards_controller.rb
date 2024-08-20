@@ -3,13 +3,13 @@ class SurfboardsController < ApplicationController
     @surfboards = Surfboard.all
   end
 
-  def show
-    @surfboard = Surboard.find(params[:id])
-  end
+  # def show
+  #   @surfboard = Surfboard.find(params[:id])
+  # end
 
-  private
+  # private
 
-  def surfboard_params
-    params.require(:surfboard).permit(:name, :details, :price, :address, :photo)
-  end
+  # def surfboard_params
+  #   params.require(:surfboard).permit(:name, :details, :price, :address, :photo)
+  # end
 end
