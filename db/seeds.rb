@@ -29,7 +29,7 @@ surfboard_1 = Surfboard.create!(
   address: "123 Ocean Ave, Malibu, CA",
   price: "25",
   details: "7'6'' longboard, perfect for beginners looking for a stable ride.",
-  photo: "https://images.unsplash.com/photo-1533198662378-20227bc95286",
+  photo: "data:image/jpeg;base64,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",
   user: user_1
 )
 
@@ -38,7 +38,7 @@ surfboard_2 = Surfboard.create!(
   address: "456 Sunset Blvd, Huntington Beach, CA",
   price: "35",
   details: "6' shortboard, designed for advanced surfers looking to carve waves.",
-  photo: "https://images.unsplash.com/photo-1516810551572-53ffdd2e0181",
+  photo: "https://borasurfar.com/wp-content/uploads/2024/08/IMG_6310-768x1024.webp",
   user: user_2
 )
 
@@ -56,7 +56,7 @@ surfboard_4 = Surfboard.create!(
   address: "321 Surfside Road, Waikiki, HI",
   price: "40",
   details: "8' hybrid board, perfect for intermediate surfers, handles well in most conditions.",
-  photo: "https://images.unsplash.com/photo-1558123245-c231f69cbef5",
+  photo: "https://cdn11.bigcommerce.com/s-pllu8dargz/images/stencil/500x659/products/35432/78359/IMG_2415__53557.1723841389.jpg?c=1",
   user: user_4
 )
 
@@ -65,7 +65,7 @@ surfboard_5 = Surfboard.create!(
   address: "654 Shoreline St, Bondi Beach, Sydney, AUS",
   price: "50",
   details: "5'10'' performance shortboard, built for high-speed and sharp turns.",
-  photo: "https://images.unsplash.com/photo-1527090445725-34eec47cbb94",
+  photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDZ0m0EaSghT04qxFAMxM7XH8YcGQnD1zXwfuSUnLXvGi5kMJ8u6bt1V-JE268pRlZc_8&usqp=CAU",
   user: user_5
 )
 
@@ -74,7 +74,7 @@ surfboard_6 =Surfboard.create!(
   address: "987 Oceanfront Walk, Venice Beach, CA",
   price: "20",
   details: "6'8'' funboard, great for catching smaller waves with ease.",
-  photo: "https://images.unsplash.com/photo-1510250504557-ec0db6a4f4d2",
+  photo: "https://www.surfstationstore.com/cdn/shop/files/TronLost_2000x.jpg?v=1719509913",
   user: user_6
 )
 
@@ -83,7 +83,7 @@ surfboard_7 = Surfboard.create!(
   address: "246 Beachfront Lane, Oahu, HI",
   price: "45",
   details: "9'6'' longboard, excellent for classic longboarding style in small waves.",
-  photo: "https://images.unsplash.com/photo-1517758478390-b9d9a2c13b20",
+  photo: "https://images.squarespace-cdn.com/content/v1/5197c761e4b0a2d4e1c2f428/1543452329146-Z1XSA4OWVB8XCYPVY9W6/used+shortboards+5%278+-+6%272",
   user: user_7
 )
 
@@ -92,7 +92,7 @@ surfboard_8 = Surfboard.create!(
   address: "112 Breakers Blvd, Byron Bay, AUS",
   price: "55",
   details: "6'2'' shortboard, lightweight and perfect for advanced riders.",
-  photo: "https://images.unsplash.com/photo-1580125212563-81a2cf04d109",
+  photo: "https://cdn11.bigcommerce.com/s-oqgbp7cpws/images/stencil/original/products/24791/25265/IMG_4629_2__36635.1661368150.jpg?c=1",
   user: user_8
 )
 
@@ -101,7 +101,7 @@ surfboard_9 = Surfboard.create!(
   address: "333 Pipeline Rd, North Shore, Oahu, HI",
   price: "60",
   details: "7' fish board, perfect for high-performance in bigger waves.",
-  photo: "https://images.unsplash.com/photo-1600181693014-0a2b30fd7f5f",
+  photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQilAPA6J7yBLlnJCU2wiZRxzlkNz-etP2DhQ&s",
   user: user_9
 )
 
@@ -110,7 +110,7 @@ surfboard_10 = Surfboard.create!(
   address: "777 Surf Ave, San Diego, CA",
   price: "35",
   details: "8' funboard, ideal for both beginners and experienced surfers.",
-  photo: "https://images.unsplash.com/photo-1518509562904-91bbd73eb18e",
+  photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9TvpHhujFdr6Q5DwxDrJmy64_DcNoq0vP1A&s",
   user: user_10
 )
 
