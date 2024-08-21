@@ -29,7 +29,7 @@ puts "users created"
 # surfboards
 surfboard_1 = Surfboard.create!(
   name: "Blue Wave Cruiser",
-  address: "123 Ocean Ave, Malibu, CA",
+  address: " R. do Centro Cultural 45, Lisbon, Portugal",
   price: "25",
   details: "7'6'' longboard, perfect for beginners looking for a stable ride.",
   photo: "https://plus.unsplash.com/premium_photo-1676645882020-8387c2c77ef8?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -38,7 +38,7 @@ surfboard_1 = Surfboard.create!(
 
 surfboard_2 = Surfboard.create!(
   name: "Shredder Pro 3000",
-  address: "456 Sunset Blvd, Huntington Beach, CA",
+  address: "456 Sunset Blvd, Huntington Beach, California, United States",
   price: "35",
   details: "6' shortboard, designed for advanced surfers looking to carve waves.",
   photo: "https://plus.unsplash.com/premium_photo-1664369474135-dcb902213eaa?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
