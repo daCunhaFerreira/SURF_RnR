@@ -1,9 +1,12 @@
 class SurfboardsController < ApplicationController
- 
   def index
     @surfboards = Surfboard.all
   end
-  
+
+  def show
+    @surfboard = Surfboard.find(params[:id])
+  end
+
   def new
     @surfboard = Surfboard.new
   end
@@ -23,9 +26,4 @@ class SurfboardsController < ApplicationController
   def surfboard_params
     params.require(:surfboard).permit(:name, :details, :price, :address, :photo)
   end
-
-  def show
-    @surfboard = Surfboard.find(params[:id])
-  end
-
 end
