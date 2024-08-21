@@ -24,9 +24,8 @@ class SurfboardsController < ApplicationController
     params.require(:surfboard).permit(:name, :details, :price, :address, :photo)
   end
 
-  # def show
-  #   @surfboard = Surfboard.find(params[:id])
-  # end
-
+  def show
+    @surfboard = Surfboard.find(params[:id])
+  end
 
 end
