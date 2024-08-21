@@ -1,10 +1,18 @@
 class SurfboardsController < ApplicationController
+  
   def index
     @surfboards = Surfboard.all
   end
 
   def show
     @surfboard = Surfboard.find(params[:id])
+
+    @markers =
+      {
+        lat: @surfboard.latitude,
+        lng: @surfboard.longitude,
+        marker_html: render_to_string(partial: "marker")
+      }
   end
 
   def new
@@ -24,6 +32,7 @@ class SurfboardsController < ApplicationController
   private
 
   def surfboard_params
-    params.require(:surfboard).permit(:name, :details, :price, :address, :photo)
+    params.require(:surfboard).permit(:name, :details, :price, :address, :picture)
   end
+
 end
