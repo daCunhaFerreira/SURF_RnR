@@ -8,8 +8,11 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 
-
 #users
+Booking.destroy_all
+Surfboard.destroy_all
+User.destroy_all
+
 user_1 = User.create!(email: "surfer1@example.com", password: "password123")
 user_2 = User.create!(email: "surfer2@example.com", password: "password123")
 user_3 = User.create!(email: "surfer3@example.com", password: "password123")
@@ -29,7 +32,7 @@ surfboard_1 = Surfboard.create!(
   address: "123 Ocean Ave, Malibu, CA",
   price: "25",
   details: "7'6'' longboard, perfect for beginners looking for a stable ride.",
-  photo: "https://images.unsplash.com/photo-1533198662378-20227bc95286",
+  photo: "https://plus.unsplash.com/premium_photo-1676645882020-8387c2c77ef8?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   user: user_1
 )
 
@@ -38,7 +41,7 @@ surfboard_2 = Surfboard.create!(
   address: "456 Sunset Blvd, Huntington Beach, CA",
   price: "35",
   details: "6' shortboard, designed for advanced surfers looking to carve waves.",
-  photo: "https://images.unsplash.com/photo-1516810551572-53ffdd2e0181",
+  photo: "https://plus.unsplash.com/premium_photo-1664369474135-dcb902213eaa?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   user: user_2
 )
 
@@ -47,7 +50,7 @@ surfboard_3 = Surfboard.create!(
   address: "789 Coastal Drive, Santa Cruz, CA",
   price: "30",
   details: "9' traditional longboard, ideal for noseriding and smooth glides.",
-  photo: "https://images.unsplash.com/photo-1522071820081-009f0129c71c",
+  photo: "https://images.unsplash.com/photo-1528163308254-5852067f0a1e?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   user: user_3
 )
 
@@ -56,7 +59,7 @@ surfboard_4 = Surfboard.create!(
   address: "321 Surfside Road, Waikiki, HI",
   price: "40",
   details: "8' hybrid board, perfect for intermediate surfers, handles well in most conditions.",
-  photo: "https://images.unsplash.com/photo-1558123245-c231f69cbef5",
+  photo: "https://media.istockphoto.com/id/658337444/pt/foto/vintage-surfboards.jpg?s=1024x1024&w=is&k=20&c=AZ5GLiVpXswOkeKC-Xn-DvXquPOt8lxTXKzoDeeh4Sk=",
   user: user_4
 )
 
@@ -65,7 +68,7 @@ surfboard_5 = Surfboard.create!(
   address: "654 Shoreline St, Bondi Beach, Sydney, AUS",
   price: "50",
   details: "5'10'' performance shortboard, built for high-speed and sharp turns.",
-  photo: "https://images.unsplash.com/photo-1527090445725-34eec47cbb94",
+  photo: "https://media.istockphoto.com/id/656528230/pt/foto/vintage-surfboards.jpg?s=1024x1024&w=is&k=20&c=JtmzUWby689p8IZML3IICY7_hJgL3pJ5FHdIo4UmOYY=",
   user: user_5
 )
 
@@ -74,7 +77,7 @@ surfboard_6 =Surfboard.create!(
   address: "987 Oceanfront Walk, Venice Beach, CA",
   price: "20",
   details: "6'8'' funboard, great for catching smaller waves with ease.",
-  photo: "https://images.unsplash.com/photo-1510250504557-ec0db6a4f4d2",
+  photo: "https://media.istockphoto.com/id/465032758/pt/foto/vintage-60-prancha-de-surf-isoladas-no-branco.jpg?s=1024x1024&w=is&k=20&c=TeRI2XPbIRbqfUL7u7wkIcZHhVSh0WswU3IdkIO0PYY=",
   user: user_6
 )
 
@@ -83,7 +86,7 @@ surfboard_7 = Surfboard.create!(
   address: "246 Beachfront Lane, Oahu, HI",
   price: "45",
   details: "9'6'' longboard, excellent for classic longboarding style in small waves.",
-  photo: "https://images.unsplash.com/photo-1517758478390-b9d9a2c13b20",
+  photo: "https://media.istockphoto.com/id/464996550/pt/foto/vintage-70-espuma-prancha-de-surf-isoladas-no-branco.jpg?s=1024x1024&w=is&k=20&c=p5VYawIg4Y1dvnqIMqYcbja6tJo84zHH9sX8OvLx5eE=",
   user: user_7
 )
 
@@ -92,7 +95,7 @@ surfboard_8 = Surfboard.create!(
   address: "112 Breakers Blvd, Byron Bay, AUS",
   price: "55",
   details: "6'2'' shortboard, lightweight and perfect for advanced riders.",
-  photo: "https://images.unsplash.com/photo-1580125212563-81a2cf04d109",
+  photo: "https://media.istockphoto.com/id/465032728/pt/foto/vintage-70-espuma-prancha-de-surf-isoladas-no-branco.jpg?s=1024x1024&w=is&k=20&c=G3ETgAakJVtsge30tqBBYSC_Bl8tLEqToX7GIj4qiyE=",
   user: user_8
 )
 
@@ -101,7 +104,7 @@ surfboard_9 = Surfboard.create!(
   address: "333 Pipeline Rd, North Shore, Oahu, HI",
   price: "60",
   details: "7' fish board, perfect for high-performance in bigger waves.",
-  photo: "https://images.unsplash.com/photo-1600181693014-0a2b30fd7f5f",
+  photo: "https://media.istockphoto.com/id/1470159946/pt/foto/white-and-green-longboard.jpg?s=1024x1024&w=is&k=20&c=iRmHN0MkD8YlkqH09702WRECC6dMwtYAZKiLYCE2-uk=",
   user: user_9
 )
 
@@ -110,14 +113,13 @@ surfboard_10 = Surfboard.create!(
   address: "777 Surf Ave, San Diego, CA",
   price: "35",
   details: "8' funboard, ideal for both beginners and experienced surfers.",
-  photo: "https://images.unsplash.com/photo-1518509562904-91bbd73eb18e",
+  photo: "https://media.istockphoto.com/id/1281303246/pt/foto/blank-white-wood-surfboarf-with-fins-mockup-front-and-back.jpg?s=1024x1024&w=is&k=20&c=CJ6Lk-lWQjqm2GtweRw65Ywo4Z1szwpC0c3ULrK_aXI=",
   user: user_10
 )
 
 puts "Surfboards created"
 
 #booking
-
 Booking.create!(start_date: Date.new(2024, 8, 1), end_date: Date.new(2024, 8, 5), user: user_1, surfboard: surfboard_1)
 Booking.create!(start_date: Date.new(2024, 8, 6), end_date: Date.new(2024, 8, 10), user: user_2, surfboard: surfboard_2)
 Booking.create!(start_date: Date.new(2024, 8, 11), end_date: Date.new(2024, 8, 15), user: user_3, surfboard: surfboard_3)
