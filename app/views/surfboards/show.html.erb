@@ -2,12 +2,14 @@
   <div class="row">
       <div class="col-lg">
         <div class="card-trip">
-          <%= image_tag @surfboard.photo, class:"photo-img" %>
-            <div class="card-trip-infos">
-              <h2><%= @surfboard.name %></h2>
-              <p><%= @surfboard.details %></p>
-            </div>
-            <h2 class="card-trip-pricing"><%= @surfboard.price %>£</h2>
+          <% if @surfboard.photo %>
+            <%= image_tag @surfboard.photo, class:"photo-img" %>
+          <% end %>
+          <div class="card-trip-infos">
+            <h2><%= @surfboard.name %></h2>
+            <p><%= @surfboard.details %></p>
+          </div>
+          <h2 class="card-trip-pricing"><%= @surfboard.price %>£</h2>
         </div>
       </div>
   </div>
