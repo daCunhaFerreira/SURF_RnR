@@ -14,16 +14,16 @@ Surfboard.destroy_all
 User.destroy_all
 
 
-user_1 = User.create!(email: "surfer1@example.com", password: "password123")
-user_2 = User.create!(email: "surfer2@example.com", password: "password123")
-user_3 = User.create!(email: "surfer3@example.com", password: "password123")
-user_4 = User.create!(email: "surfer4@example.com", password: "password123")
-user_5 = User.create!(email: "surfer5@example.com", password: "password123")
-user_6 = User.create!(email: "surfer6@example.com", password: "password123")
-user_7 = User.create!(email: "surfer7@example.com", password: "password123")
-user_8 = User.create!(email: "surfer8@example.com", password: "password123")
-user_9 = User.create!(email: "surfer9@example.com", password: "password123")
-user_10 = User.create!(email: "surfer10@example.com", password: "password123")
+user_1 = User.create!(email: "surfer1@example.com", password: "password123", first_name: "Ethan", last_name: "Matthews")
+user_2 = User.create!(email: "surfer2@example.com", password: "password123", first_name: "Olivia", last_name: "Thompson")
+user_3 = User.create!(email: "surfer3@example.com", password: "password123", first_name: "Jack", last_name: "Ryan")
+user_4 = User.create!(email: "surfer4@example.com", password: "password123", first_name: "Sophia", last_name: "Bennet")
+user_5 = User.create!(email: "surfer5@example.com", password: "password123", first_name: "Liam", last_name: "Harrison")
+user_6 = User.create!(email: "surfer6@example.com", password: "password123", first_name: "Isabella", last_name: "Anderson")
+user_7 = User.create!(email: "surfer7@example.com", password: "password123", first_name: "Mason", last_name: "Carter")
+user_8 = User.create!(email: "surfer8@example.com", password: "password123", first_name: "Ava", last_name: "Collins")
+user_9 = User.create!(email: "surfer9@example.com", password: "password123", first_name: "James", last_name: "Turner")
+user_10 = User.create!(email: "surfer10@example.com", password: "password123", first_name: "Mia", last_name: "Hughes")
 
 puts "users created"
 
