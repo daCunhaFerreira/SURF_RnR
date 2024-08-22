@@ -21,11 +21,15 @@
         </div>
     </div>
 
-    <div class="mx-auto" style="width: 30%; height: 600px;"
-      data-controller="map"
-      data-map-markers-value="<%= @markers.to_json %>"
-      data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
-    </div>
+    <% if @surfboard.latitude && @surfboard.longitude%>
+      <div class="mx-auto" style="width: 30%; height: 600px;"
+        data-controller="map"
+        data-map-markers-value="<%= @markers.to_json %>"
+        data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+      </div>
+    <% else %>
+      <%= @surfboard.address %>
+    <% end %>
   </div>
 
   <%= render "surfboards/bookingform" %>
