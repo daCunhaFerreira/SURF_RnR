@@ -5,8 +5,10 @@
         <div class="card-trip">
           <% if @surfboard.photo %>
             <%= image_tag @surfboard.photo, class:"photo-img" %>
-          <% elsif @surfboard.picture.key %>
-            <%= cl_image_tag @surfboard.picture.key, class:"photo-img" %>
+          <% elsif @surfboard.pictures.length > 0 %>
+            <% @surfboard.pictures.each do |picture| %>
+              <%= cl_image_tag picture.key, clas: "photo-img" %>
+            <% end %>
           <% end %>
           <div class="card-trip-infos">
             <h2><%= @surfboard.name %></h2>
