@@ -10,7 +10,7 @@
           <%= f.input :details %>
           <%= f.input :price, as: :numeric %>
           <%= f.input :address %>
-           <%= f.input :picture, as: :file %>
+           <%= f.input :pictures, as: :file, input_html: { multiple: true } %>
           <%= f.submit class: "btn btn-primary" %>
         <% end %>
       </div>
