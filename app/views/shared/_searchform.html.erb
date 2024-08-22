@@ -1,8 +1,4 @@
-<%= simple_form_for :search, url: root_path, method: :get do |f| %>
-  <div class="search-form-control form-group ">
-    <input class="form-control string required" placeholder="Search a location" type="text" name="search[query]" id="search_query" />
-    <%= link_to surfboards_path, class: 'btn btn-success' do %>
-       <i class="fas fa-search"></i> Search
-    <% end %>
-  </div>
+<%= form_with url: surfboards_path, method: :get, local: true, class: 'd-flex gap-2' do %>
+  <%= text_field_tag :query, params[:query], class:"form-control string required",placeholder:'Search a location' %>
+  <%= submit_tag "Search", class: 'btn btn-success' %>
 <% end %>

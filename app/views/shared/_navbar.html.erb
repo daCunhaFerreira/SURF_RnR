@@ -33,10 +33,10 @@
           </li>
           <% end %>
         </ul>
-        <%# <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search a location" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form> %>
+        <%= form_with url: surfboards_path, method: :get, local: true, class: 'd-flex gap-2' do %>
+          <%= text_field_tag :query, params[:query], class:"form-control string required", placeholder:'Search a location' %>
+          <%= submit_tag "Search", class: 'btn btn-success' %>
+        <% end %>
       </div>
     </div>
   </div>
