@@ -6,7 +6,7 @@ class SurfboardsController < ApplicationController
 
   def show
     @surfboard = Surfboard.find(params[:id])
-
+    @booking = @booking = Booking.new
     @markers =
       {
         lat: @surfboard.latitude,
