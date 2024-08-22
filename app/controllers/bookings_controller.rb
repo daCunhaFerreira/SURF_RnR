@@ -11,10 +11,14 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.surfboard = @surfboard
     if @booking.save
-      redirect_to surfboard_path(@surfboard)
+      redirect_to my_bookings_path
     else
       render :new, status: :unprocessable_entity
     end
+  end
+
+  def my_bookings
+    @my_bookings = Booking.all.where(user: current_user)
   end
 
   private

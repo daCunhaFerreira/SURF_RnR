@@ -1,0 +1,10 @@
+<div class="container">
+  <h1 class="my-3">Book <strong><%= @surfboard.name %></strong> </h1>
+
+  <%= simple_form_for [@surfboard, @booking] do |f| %>
+    <%= f.input :start_date, as: :string, input_html: { data: { controller: "datepicker" } } %>
+    <%= f.input :end_date, as: :string, input_html: { data: { controller: "datepicker" } } %>
+    <%= f.submit  %>
+  <% end %>
+
+</div>

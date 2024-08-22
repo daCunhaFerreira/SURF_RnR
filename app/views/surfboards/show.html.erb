@@ -1,31 +1,29 @@
 <div class="countainer p-5">
 
-  <div class="row">
-      <div class="col-lg">
-        <div class="card-trip">
-          <% if @surfboard.photo %>
-            <%= image_tag @surfboard.photo, class:"photo-img" %>
-          <% elsif @surfboard.picture.key %>
-            <%= cl_image_tag @surfboard.picture.key, class:"photo-img" %>
-          <% end %>
-          <div class="card-trip-infos">
-            <h2><%= @surfboard.name %></h2>
-            <p><%= @surfboard.details %></p>
+  <div class="container d-flex m-3">
+    <div class="row">
+        <div class="col-lg">
+          <div class="card-trip">
+            <% if @surfboard.photo %>
+              <%= image_tag @surfboard.photo, class:"photo-img" %>
+            <% elsif @surfboard.picture.key %>
+              <%= cl_image_tag @surfboard.picture.key, class:"photo-img" %>
+            <% end %>
+            <div class="card-trip-infos">
+              <h2><%= @surfboard.name %></h2>
+              <p><%= @surfboard.details %></p>
+            </div>
+            <h2 class="card-trip-pricing"><%= @surfboard.price %>£</h2>
           </div>
-          <h2 class="card-trip-pricing"><%= @surfboard.price %>£</h2>
         </div>
-      </div>
+    </div>
+
+    <div class="mx-auto" style="width: 30%; height: 600px;"
+      data-controller="map"
+      data-map-markers-value="<%= @markers.to_json %>"
+      data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
   </div>
 
-
-  <%= link_to new_surfboard_booking_path(@surfboard), class: 'btn btn-primary' do %>
-    <button class='btn btn-primary'>Book this board</button>
-  <% end %>
-
-  <div class="mx-auto" style="width: 98%; height: 400px;"
-    data-controller="map"
-    data-map-markers-value="<%= @markers.to_json %>"
-    data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
-  </div>
-
+  <%= render "surfboards/bookingform" %>
 </div>
