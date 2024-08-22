@@ -1,7 +1,10 @@
 class SurfboardsController < ApplicationController
-  
+
   def index
     @surfboards = Surfboard.all
+    if params[:query].present?
+      @surfboards = Surfboard.super_search(params[:query])
+    end
   end
 
   def show
