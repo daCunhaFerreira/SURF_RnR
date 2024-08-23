@@ -43,8 +43,6 @@ surfboard_1.pictures.attach(
   ]
 )
 
-sleep(1)
-
 surfboard_2 = Surfboard.create!(
   name: "Shredder Pro 3000",
   address: "16 Villa Gaudelet, Paris",
@@ -59,7 +57,6 @@ surfboard_2.pictures.attach(
     { io: File.open(Rails.root.join("app/assets/images/black3.webp")), filename: 'black3.webp' }
   ]
 )
-sleep(1)
 
 surfboard_3 = Surfboard.create!(
   name: "The Classic Logger",
@@ -75,7 +72,6 @@ surfboard_3.pictures.attach(
   ]
 )
 
-sleep(1)
 
 surfboard_4 = Surfboard.create!(
   name: "Green Machine",
@@ -92,7 +88,6 @@ surfboard_4.pictures.attach(
   ]
 )
 
-sleep(1)
 
 surfboard_5 = Surfboard.create!(
   name: "Thunderstrike",
@@ -112,8 +107,6 @@ surfboard_5.pictures.attach(
   ]
 )
 
-sleep(1)
-
 surfboard_6 =Surfboard.create!(
   name: "Sunset Dreamer",
   address: "R. do Centro Cultural 33, Lisbon, Portugal",
@@ -122,7 +115,6 @@ surfboard_6 =Surfboard.create!(
   photo: "https://media.istockphoto.com/id/465032758/pt/foto/vintage-60-prancha-de-surf-isoladas-no-branco.jpg?s=1024x1024&w=is&k=20&c=TeRI2XPbIRbqfUL7u7wkIcZHhVSh0WswU3IdkIO0PYY=",
   user: user_6
 )
-sleep(1)
 
 surfboard_7 = Surfboard.create!(
   name: "Tropical Glide",
@@ -132,7 +124,6 @@ surfboard_7 = Surfboard.create!(
   photo: "https://media.istockphoto.com/id/464996550/pt/foto/vintage-70-espuma-prancha-de-surf-isoladas-no-branco.jpg?s=1024x1024&w=is&k=20&c=p5VYawIg4Y1dvnqIMqYcbja6tJo84zHH9sX8OvLx5eE=",
   user: user_7
 )
-sleep(1)
 
 surfboard_8 = Surfboard.create!(
   name: "Stormrider",
@@ -142,7 +133,6 @@ surfboard_8 = Surfboard.create!(
   photo: "https://media.istockphoto.com/id/465032728/pt/foto/vintage-70-espuma-prancha-de-surf-isoladas-no-branco.jpg?s=1024x1024&w=is&k=20&c=G3ETgAakJVtsge30tqBBYSC_Bl8tLEqToX7GIj4qiyE=",
   user: user_8
 )
-sleep(1)
 
 surfboard_9 = Surfboard.create!(
   name: "Pacific Soul",
@@ -152,7 +142,6 @@ surfboard_9 = Surfboard.create!(
   photo: "https://media.istockphoto.com/id/1470159946/pt/foto/white-and-green-longboard.jpg?s=1024x1024&w=is&k=20&c=iRmHN0MkD8YlkqH09702WRECC6dMwtYAZKiLYCE2-uk=",
   user: user_9
 )
-sleep(1)
 
 surfboard_10 = Surfboard.create!(
   name: "Wave Rider",
