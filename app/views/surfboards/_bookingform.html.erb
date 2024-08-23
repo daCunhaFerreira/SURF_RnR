@@ -1,10 +1,12 @@
 <div class="container">
-  <h3 class="my-3">Book <strong><%= @surfboard.name %></strong> - <%= @surfboard.price %>€</h3>
+  <h3 class="my-3" data-pricer-target="total_price"  >Book <strong><%= @surfboard.name %></strong> - <%= @surfboard.price %>€</h3>
 
   <%= simple_form_for [@surfboard, @booking] do |f| %>
-    <%= f.input :start_date, as: :string, input_html: { data: { controller: "datepicker" } } %>
-    <%= f.input :end_date, as: :string, input_html: { data: { controller: "datepicker" } } %>
-    <%= f.submit %>
+    <%= f.input :start_date, as: :string, input_html: { data: { controller: "datepicker", target: "pricer.start_date", action: "change->pricer#calculate" } } %>
+    <%= f.input :end_date, as: :string, input_html: { data: { controller: "datepicker", target: "pricer.end_date", action: "change->pricer#calculate" } } %>
+    <%= button_tag(type: 'submit', class: 'btn btn-success text-end') do %>
+    <i class="fa-solid fa-cart-shopping" style="color: #ffffff;"> Book Board</i>
+    <% end %>
   <% end %>
 
 </div>
