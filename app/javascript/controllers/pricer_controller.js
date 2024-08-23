@@ -14,6 +14,6 @@ export default class extends Controller {
     console.log(this.total_priceTarget)
     console.log(Days);
     console.log(price);
-    isNaN(price) ? this.total_priceTarget.innerHTML = "0€" : this.total_priceTarget.innerHTML = price + "€"
+    isNaN(price) ? this.total_priceTarget.innerHTML = "" : this.total_priceTarget.innerHTML = "Total price of this booking - " + price + "€"
   }
 }

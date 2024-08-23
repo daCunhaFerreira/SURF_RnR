@@ -37,8 +37,7 @@
 
           <h2 class="card-trip-pricing"><%= @surfboard.price %>€ per day.</h2>
 
-
-        <div data-controller="pricer" data-pricer-price-value="<%= @surfboard.price %>" class="pb-2 mt-3" style="background-color:#FFFFFF; border-top:1px dotted #B35F56;">
+        <div data-controller="pricer" data-pricer-price-value="<%= @surfboard.price %>" class="pb-2 mt-3" style="background-color:#F5F5F5; border-top:1px dotted #B35F56;">
           <%= render "surfboards/bookingform" %>
         </div>
         </div>
