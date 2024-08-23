@@ -1,4 +1,6 @@
 <%= form_with url: surfboards_path, method: :get, local: true, class: 'd-flex gap-2' do %>
   <%= text_field_tag :query, params[:query], class:"form-control string required",placeholder:'Search a location' %>
-  <%= submit_tag "Search", class: 'btn btn-success' %>
+  <%= button_tag(type: 'submit', class: 'btn btn-success') do %>
+    <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i>
+  <% end %>
 <% end %>
