@@ -30,3 +30,32 @@
 .card-product .card-product-infos {
   padding: 16px;
 }
+
+.title-container {
+  background-color: white;
+  color: black; /* Changed color to black for better visibility */
+  padding: 15px 25px;
+  border-radius: 10px;
+  display: flex; /* Flexbox to handle spacing */
+  justify-content: space-between; /* Distributes space between the title and button */
+  align-items: center; /* Centers them vertically */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.title-container h1 {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+.title-container .btn-primary {
+  font-size: 1.2em; /* Adjust the font size for the button */
+  padding: 10px 20px; /* Padding for the button */
+}
+
+.title-container i {
+  margin-right: 10px;
+  font-size: 1.2em; /* Icon size adjustment */
+}
+

@@ -1,11 +1,16 @@
-<div class="container m-5">
+<div class="container booking-container">
   <% if @my_bookings.empty? %>
-    <h3>Sorry, you have no bookings...</h3>
+    <div class="empty-bookings">
+      <h3>Sorry, you have no bookings...</h3>
+    </div>
   <% else %>
     <% @my_bookings.each do |booking| %>
-      <h3>- You have booked <strong><%= link_to booking.surfboard.name, surfboard_path(booking.surfboard_id) %></strong></h3>
-      <p><em>From <%= booking.start_date %> to <%= booking.end_date %>.</em></p>
+      <div class="booking-item">
+        <h3><i class="fa-solid fa-surfboard"></i> You have booked <strong><%= link_to booking.surfboard.name, surfboard_path(booking.surfboard_id) %></strong></h3>
+        <p class="booking-dates"><em>From <%= booking.start_date %> to <%= booking.end_date %>.</em></p>
+      </div>
       <hr>
     <% end %>
   <% end %>
-<div>
+</div>
+
