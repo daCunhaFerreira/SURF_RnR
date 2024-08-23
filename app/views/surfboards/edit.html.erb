@@ -1,0 +1,42 @@
+<div >
+<div class="container py-5" style="background-image: url('https://images.unsplash.com/photo-1611434242391-1b108493f178?q=80&w=3132&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); background-size: cover; background-position: center; background-color: rgba(0, 0, 0, 0.5); background-blend-mode: overlay;">
+  <%= link_to my_boards_surfboards_path, class:"btn btn-primary" do %>
+  <i class="fa-solid fa-arrow-left"></i> Go back
+  <% end %>
+      <div class="form-container">
+        <h1>Edit <%= @surfboard.name %> </h1>
+            <%= form_with model: @surfboard, html: { multipart: true } do |f| %>
+              <%= f.label :name %>
+              <%= f.text_field :name %>
+
+              <%= f.label :details %>
+              <%= f.text_field :details %>
+
+              <%= f.label :address %>
+              <%= f.text_field :address %>
+
+              <%= f.label :price %>
+              <%= f.number_field :price %>
+
+              <%= f.label :pictures, "Upload New Pictures" %>
+              <%= f.file_field :pictures, multiple: true %>
+
+          <div class="current-pictures">
+              <h3>Current Pictures</h3>
+
+              <% @surfboard.pictures.each do |picture| %>
+                <div class="picture-container">
+                  <%= image_tag picture.url %>
+                  <label>
+                    <%= check_box_tag "surfboard[remove_pictures][]", picture.id %> Remove this picture
+                  </label>
+                </div>
+              <% end %>
+          </div>
+
+          <%= f.submit "Update Surfboard", class: "btn btn-primary" %>
+        <% end %>
+      </div>
+
+</div>
+</div>
