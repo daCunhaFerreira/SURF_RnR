@@ -67,6 +67,7 @@ class SurfboardsController < ApplicationController
     redirect_to my_boards_surfboards_path, notice: 'Surfboard was successfully deleted.'
   end
 
+
   private
 
   def surfboard_params

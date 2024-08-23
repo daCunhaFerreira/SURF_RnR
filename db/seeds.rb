@@ -14,16 +14,16 @@ Surfboard.destroy_all
 User.destroy_all
 
 
-user_1 = User.create!(email: "surfer1@example.com", password: "password123")
-user_2 = User.create!(email: "surfer2@example.com", password: "password123")
-user_3 = User.create!(email: "surfer3@example.com", password: "password123")
-user_4 = User.create!(email: "surfer4@example.com", password: "password123")
-user_5 = User.create!(email: "surfer5@example.com", password: "password123")
-user_6 = User.create!(email: "surfer6@example.com", password: "password123")
-user_7 = User.create!(email: "surfer7@example.com", password: "password123")
-user_8 = User.create!(email: "surfer8@example.com", password: "password123")
-user_9 = User.create!(email: "surfer9@example.com", password: "password123")
-user_10 = User.create!(email: "surfer10@example.com", password: "password123")
+user_1 = User.create!(email: "surfer1@example.com", password: "password123", first_name: "Ethan", last_name: "Matthews")
+user_2 = User.create!(email: "surfer2@example.com", password: "password123", first_name: "Olivia", last_name: "Thompson")
+user_3 = User.create!(email: "surfer3@example.com", password: "password123", first_name: "Jack", last_name: "Ryan")
+user_4 = User.create!(email: "surfer4@example.com", password: "password123", first_name: "Sophia", last_name: "Bennet")
+user_5 = User.create!(email: "surfer5@example.com", password: "password123", first_name: "Liam", last_name: "Harrison")
+user_6 = User.create!(email: "surfer6@example.com", password: "password123", first_name: "Isabella", last_name: "Anderson")
+user_7 = User.create!(email: "surfer7@example.com", password: "password123", first_name: "Mason", last_name: "Carter")
+user_8 = User.create!(email: "surfer8@example.com", password: "password123", first_name: "Ava", last_name: "Collins")
+user_9 = User.create!(email: "surfer9@example.com", password: "password123", first_name: "James", last_name: "Turner")
+user_10 = User.create!(email: "surfer10@example.com", password: "password123", first_name: "Mia", last_name: "Hughes")
 
 puts "users created"
 
@@ -43,8 +43,6 @@ surfboard_1.pictures.attach(
   ]
 )
 
-sleep(1)
-
 surfboard_2 = Surfboard.create!(
   name: "Shredder Pro 3000",
   address: "16 Villa Gaudelet, Paris",
@@ -59,7 +57,6 @@ surfboard_2.pictures.attach(
     { io: File.open(Rails.root.join("app/assets/images/black3.webp")), filename: 'black3.webp' }
   ]
 )
-sleep(1)
 
 surfboard_3 = Surfboard.create!(
   name: "The Classic Logger",
@@ -75,7 +72,6 @@ surfboard_3.pictures.attach(
   ]
 )
 
-sleep(1)
 
 surfboard_4 = Surfboard.create!(
   name: "Green Machine",
@@ -92,7 +88,6 @@ surfboard_4.pictures.attach(
   ]
 )
 
-sleep(1)
 
 surfboard_5 = Surfboard.create!(
   name: "Thunderstrike",
@@ -112,8 +107,6 @@ surfboard_5.pictures.attach(
   ]
 )
 
-sleep(1)
-
 surfboard_6 =Surfboard.create!(
   name: "Sunset Dreamer",
   address: "R. do Centro Cultural 33, Lisbon, Portugal",
@@ -122,7 +115,6 @@ surfboard_6 =Surfboard.create!(
   photo: "https://media.istockphoto.com/id/465032758/pt/foto/vintage-60-prancha-de-surf-isoladas-no-branco.jpg?s=1024x1024&w=is&k=20&c=TeRI2XPbIRbqfUL7u7wkIcZHhVSh0WswU3IdkIO0PYY=",
   user: user_2
 )
-sleep(1)
 
 surfboard_7 = Surfboard.create!(
   name: "Tropical Glide",
@@ -132,7 +124,6 @@ surfboard_7 = Surfboard.create!(
   photo: "https://media.istockphoto.com/id/464996550/pt/foto/vintage-70-espuma-prancha-de-surf-isoladas-no-branco.jpg?s=1024x1024&w=is&k=20&c=p5VYawIg4Y1dvnqIMqYcbja6tJo84zHH9sX8OvLx5eE=",
   user: user_2
 )
-sleep(1)
 
 surfboard_8 = Surfboard.create!(
   name: "Stormrider",
@@ -142,7 +133,6 @@ surfboard_8 = Surfboard.create!(
   photo: "https://media.istockphoto.com/id/465032728/pt/foto/vintage-70-espuma-prancha-de-surf-isoladas-no-branco.jpg?s=1024x1024&w=is&k=20&c=G3ETgAakJVtsge30tqBBYSC_Bl8tLEqToX7GIj4qiyE=",
   user: user_1
 )
-sleep(1)
 
 surfboard_9 = Surfboard.create!(
   name: "Pacific Soul",
@@ -152,7 +142,6 @@ surfboard_9 = Surfboard.create!(
   photo: "https://media.istockphoto.com/id/1470159946/pt/foto/white-and-green-longboard.jpg?s=1024x1024&w=is&k=20&c=iRmHN0MkD8YlkqH09702WRECC6dMwtYAZKiLYCE2-uk=",
   user: user_1
 )
-sleep(1)
 
 surfboard_10 = Surfboard.create!(
   name: "Wave Rider",
