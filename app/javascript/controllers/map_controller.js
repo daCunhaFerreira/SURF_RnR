@@ -33,6 +33,10 @@ export default class extends Controller {
   #addMarkersToMap() {
     const customMarker = document.createElement('div');
     customMarker.style.backgroundColor = 'white';
+    customMarker.style.borderRadius = '50%';
+    customMarker.style.height = '32px';
+    customMarker.style.width = '32px';
+    customMarker.style.textAlign = "center";
     customMarker.innerHTML = this.markersValue.marker_html;
 
     new mapboxgl.Marker(customMarker)
