@@ -22,6 +22,11 @@ class SurfboardsController < ApplicationController
     @surfboard = Surfboard.new
   end
 
+  def destroy
+    @surfboard.destroy
+    redirect_to root_path
+  end
+
   def create
     @surfboard = Surfboard.new(surfboard_params)
     @surfboard.user = current_user
@@ -31,6 +36,8 @@ class SurfboardsController < ApplicationController
       render :new, status: :unprocessable_entity
     end
   end
+
+
 
   private
 
