@@ -1,60 +1,60 @@
-<div class="title-container d-flex justify-content-between align-items-center">
-  <div>
-    <h1>My boards</h1>
+<div class="container d-flex flex-column justify-content-between align-items-center mt-4 mb-5">
+  <div class="d-flex w-100 justify-content-between px-5">
+    <h1 class="mt-4 mb-5">My Boards</h1>
+
+    <div>
+      <%= link_to new_surfboard_path, class: "btn btn-primary" do %>
+        <i class="fa-solid fa-plus"></i> Create a board
+      <% end %>
+    </div>
   </div>
 
-  <div>
-    <%= link_to new_surfboard_path, class: "btn btn-primary" do %>
-      <i class="fa-solid fa-plus"></i> Create a board
-    <% end %>
-  </div>
-</div>
+  <% @surfboards.each_with_index do |surfboard, index| %>
+    <div class="d-flex align-items-center justify-content-between mt-3 w-100" style="max-width: 1000px; margin: 0;">
+      <!-- Product Card Section -->
+      <div class="card-product d-flex align-items-center m-0" style="width: 95%;">
+        <!-- Container to limit carousel width -->
+        <div class="carousel-container m-0">
+          <div id="carouselExampleFade<%= index %>" class="carousel slide carousel-fade m-0" style="max-width: 250px;">
+            <div class="carousel-inner m-0">
+              <% surfboard.pictures.each_with_index do |picture, pic_index| %>
+                <div class="carousel-item <%= 'active' if pic_index == 0 %>">
+                  <!-- Responsive image class to maintain aspect ratio and fit carousel -->
+                  <%= cl_image_tag picture.key, class: "photo-img img-fluid d-block w-100" %>
+                </div>
+              <% end %>
+            </div>
 
-<% @surfboards.each_with_index do |surfboard, index| %>
-  <div class="d-flex align-items-center justify-content-between mt-3" style="max-width: 1000px; margin: 0;">
-    <!-- Product Card Section -->
-    <div class="card-product d-flex align-items-center" style="width: 95%;">
-      <!-- Container to limit carousel width -->
-      <div class="carousel-container" style="flex-shrink: 0; margin-right: 20px;">
-        <div id="carouselExampleFade<%= index %>" class="carousel slide carousel-fade" style="max-width: 200px;">
-          <div class="carousel-inner">
-            <% surfboard.pictures.each_with_index do |picture, pic_index| %>
-              <div class="carousel-item <%= 'active' if pic_index == 0 %>">
-                <!-- Responsive image class to maintain aspect ratio and fit carousel -->
-                <%= cl_image_tag picture.key, class: "photo-img img-fluid d-block w-100" %>
-              </div>
-            <% end %>
+            <!-- Carousel Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade<%= index %>" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade<%= index %>" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
           </div>
+        </div>
 
-          <!-- Carousel Controls -->
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade<%= index %>" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade<%= index %>" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
+        <!-- Surfboard information section -->
+        <div class="card-product-infos">
+          <h2><%= surfboard.name %></h2>
+          <p><strong><%= surfboard.details %></strong></p>
+          <p><%= surfboard.price %> <i class="fa-solid fa-euro-sign"></i> </p>
         </div>
       </div>
 
-      <!-- Surfboard information section -->
-      <div class="card-product-infos">
-        <h2><%= surfboard.name %></h2>
-        <p><strong><%= surfboard.details %></strong></p>
-        <p><%= surfboard.price %> <i class="fa-solid fa-euro-sign"></i> </p>
+      <!-- Icons Section -->
+      <div class="icon-section d-flex flex-column align-items-center justify-content-center"
+          style="margin-left: 5px; padding-right: 5px; background-color: white; padding: 10px; border-radius: 8px;">
+        <%= link_to edit_surfboard_path(surfboard), style:"cursor: pointer; margin-bottom: 10px; font-size: 1.5em" do %>
+        <i class="fa-regular fa-pen-to-square text-black"></i>
+        <% end %>
+        <%= link_to surfboard_path(surfboard), data: {turbo_confirm: 'Are you sure?', turbo_method: :delete }, style:"cursor: pointer; margin-bottom: 10px; font-size: 1.5em" do %>
+        <i class="fa-solid fa-trash text-black"></i>
+        <% end %>
       </div>
     </div>
-
-    <!-- Icons Section -->
-    <div class="icon-section d-flex flex-column align-items-center justify-content-center"
-         style="margin-left: 5px; padding-right: 5px; background-color: white; padding: 10px; border-radius: 8px;">
-      <%= link_to edit_surfboard_path(surfboard), style:"cursor: pointer; margin-bottom: 10px; font-size: 1.5em" do %>
-      <i class="fa-regular fa-pen-to-square"></i>
-      <% end %>
-      <%= link_to surfboard_path(surfboard), data: {turbo_confirm: 'Are you sure?', turbo_method: :delete }, style:"cursor: pointer; margin-bottom: 10px; font-size: 1.5em" do %>
-      <i class="fa-solid fa-trash"></i>
-      <% end %>
-    </div>
-  </div>
-<% end %>
+  <% end %>
+</div>
