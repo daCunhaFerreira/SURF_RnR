@@ -1,0 +1,46 @@
+<h1>My boards</h1>
+
+<% @surfboards.each_with_index do |surfboard, index| %>
+  <div class="d-flex align-items-center justify-content-between mt-3" style="max-width: 1000px; margin: 0;">
+    <!-- Product Card Section -->
+    <div class="card-product d-flex align-items-center" style="width: 95%;">
+      <!-- Container to limit carousel width -->
+      <div class="carousel-container" style="flex-shrink: 0; margin-right: 20px;">
+        <div id="carouselExampleFade<%= index %>" class="carousel slide carousel-fade" style="max-width: 200px;">
+          <div class="carousel-inner">
+            <% surfboard.pictures.each_with_index do |picture, pic_index| %>
+              <div class="carousel-item <%= 'active' if pic_index == 0 %>">
+                <!-- Responsive image class to maintain aspect ratio and fit carousel -->
+                <%= cl_image_tag picture.key, class: "photo-img img-fluid d-block w-100" %>
+              </div>
+            <% end %>
+          </div>
+
+          <!-- Carousel Controls -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade<%= index %>" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade<%= index %>" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Surfboard information section -->
+      <div class="card-product-infos">
+        <h2><%= surfboard.name %></h2>
+        <p><strong><%= surfboard.details %></strong></p>
+        <p><%= surfboard.price %> <i class="fa-solid fa-euro-sign"></i> </p>
+      </div>
+    </div>
+
+    <!-- Icons Section -->
+    <div class="icon-section d-flex flex-column align-items-center justify-content-center"
+         style="margin-left: 5px; padding-right: 5px; background-color: white; padding: 10px; border-radius: 8px;">
+      <i class="fa-regular fa-pen-to-square" style="cursor: pointer; margin-bottom: 10px; font-size: 1.5em;"></i>
+      <i class="fa-solid fa-trash" style="cursor: pointer; font-size: 1.5em;"></i>
+    </div>
+  </div>
+<% end %>

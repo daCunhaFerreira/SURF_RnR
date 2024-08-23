@@ -50,7 +50,7 @@ surfboard_2 = Surfboard.create!(
   address: "16 Villa Gaudelet, Paris",
   price: "35",
   details: "6' shortboard, designed for advanced surfers looking to carve waves.",
-  user: user_2
+  user: user_1
 )
 surfboard_2.pictures.attach(
   [
@@ -66,7 +66,7 @@ surfboard_3 = Surfboard.create!(
   address: "18 Villa Gaudelet, Paris",
   price: "30",
   details: "9' traditional longboard, ideal for noseriding and smooth glides.",
-  user: user_3
+  user: user_1
 )
 surfboard_3.pictures.attach(
   [
@@ -120,7 +120,7 @@ surfboard_6 =Surfboard.create!(
   price: "20",
   details: "6'8'' funboard, great for catching smaller waves with ease.",
   photo: "https://media.istockphoto.com/id/465032758/pt/foto/vintage-60-prancha-de-surf-isoladas-no-branco.jpg?s=1024x1024&w=is&k=20&c=TeRI2XPbIRbqfUL7u7wkIcZHhVSh0WswU3IdkIO0PYY=",
-  user: user_6
+  user: user_2
 )
 sleep(1)
 
@@ -130,7 +130,7 @@ surfboard_7 = Surfboard.create!(
   price: "45",
   details: "9'6'' longboard, excellent for classic longboarding style in small waves.",
   photo: "https://media.istockphoto.com/id/464996550/pt/foto/vintage-70-espuma-prancha-de-surf-isoladas-no-branco.jpg?s=1024x1024&w=is&k=20&c=p5VYawIg4Y1dvnqIMqYcbja6tJo84zHH9sX8OvLx5eE=",
-  user: user_7
+  user: user_2
 )
 sleep(1)
 
@@ -140,7 +140,7 @@ surfboard_8 = Surfboard.create!(
   price: "55",
   details: "6'2'' shortboard, lightweight and perfect for advanced riders.",
   photo: "https://media.istockphoto.com/id/465032728/pt/foto/vintage-70-espuma-prancha-de-surf-isoladas-no-branco.jpg?s=1024x1024&w=is&k=20&c=G3ETgAakJVtsge30tqBBYSC_Bl8tLEqToX7GIj4qiyE=",
-  user: user_8
+  user: user_1
 )
 sleep(1)
 
@@ -150,7 +150,7 @@ surfboard_9 = Surfboard.create!(
   price: "60",
   details: "7' fish board, perfect for high-performance in bigger waves.",
   photo: "https://media.istockphoto.com/id/1470159946/pt/foto/white-and-green-longboard.jpg?s=1024x1024&w=is&k=20&c=iRmHN0MkD8YlkqH09702WRECC6dMwtYAZKiLYCE2-uk=",
-  user: user_9
+  user: user_1
 )
 sleep(1)
 
@@ -160,7 +160,7 @@ surfboard_10 = Surfboard.create!(
   price: "35",
   details: "8' funboard, ideal for both beginners and experienced surfers.",
   photo: "https://media.istockphoto.com/id/1281303246/pt/foto/blank-white-wood-surfboarf-with-fins-mockup-front-and-back.jpg?s=1024x1024&w=is&k=20&c=CJ6Lk-lWQjqm2GtweRw65Ywo4Z1szwpC0c3ULrK_aXI=",
-  user: user_10
+  user: user_1
 )
 
 puts "Surfboards created"

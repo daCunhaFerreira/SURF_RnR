@@ -32,6 +32,14 @@ class SurfboardsController < ApplicationController
     end
   end
 
+  def my_boards
+    @surfboards = Surfboard.where(user: current_user)
+  end
+
+  def destroy
+    @surfboard.destroy
+  end
+
   private
 
   def surfboard_params

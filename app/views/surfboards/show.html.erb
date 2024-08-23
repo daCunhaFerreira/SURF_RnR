@@ -9,7 +9,7 @@
                 <%= image_tag @surfboard.photo, class:"photo-img" %>
               <% elsif @surfboard.pictures.length > 0 %>
                 <% @surfboard.pictures.each do |picture| %>
-                  <%= cl_image_tag picture.key, clas: "photo-img" %>
+                  <%= cl_image_tag picture.key, class: "photo-img" %>
                 <% end %>
               <% end %>
             <div class="card-trip-infos">
